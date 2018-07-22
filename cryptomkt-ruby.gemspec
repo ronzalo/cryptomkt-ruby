@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = CryptomktRuby::VERSION
   spec.authors       = ["Gonzalo Moreno"]
   spec.email         = ["goncab380@hotmail.com"]
-
+  spec.license       = "MIT"
   spec.summary       = "Ruby SDK for Cryptomkt"
   spec.description   = "Wrapper for Cryptomkt API"
   spec.homepage      = "https://github.com/ronzalo/cryptomkt-ruby"

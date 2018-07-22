@@ -13,6 +13,12 @@ module CryptomktRuby
       @logger = options.delete(:logger)
     end
 
+    # Retorna lista de órdenes activas en CryptoMarket.
+    # @param [String] market
+    # @param [String] type
+    # @param [String] page
+    # @param [String] limit
+    # @return [Hash]
     def book(market:, type:, page: 1, limit: 20)
       path = '/v1/book'
 
@@ -26,6 +32,13 @@ module CryptomktRuby
       public_get(path, params)
     end
 
+    # Corresponden a las transacciones realizadas en CryptoMarket.
+    # @param [String] market
+    # @param [String] start_at
+    # @param [String] end_at
+    # @param [String] page
+    # @param [String] limit
+    # @return [Hash]
     def trades(market:, start_at: Time.now, end_at: Time.now, page: 1, limit: 20)
       path = '/v1/trades'
 
@@ -40,18 +53,28 @@ module CryptomktRuby
       public_get(path, params)
     end
 
+    # El mercado corresponde a los pares de mercados disponibles en CryptoMarket.
+    # @return [Array]
     def market
       path = '/v1/market'
 
       public_get(path, {})
     end
 
+    # Retorna una lista de objetos ticker de mercados activos. Si está presente parámetro market solo se retorna ticker de mercado especificado.
+    # @param [String] market
+    # @return [Array]
     def ticker(market: nil)
       path = '/v1/ticker'
 
       public_get(path, market: market)
     end
 
+    # Retorna lista de órdenes activas en CryptoMarket pertenecientes al usuario propietario de las credenciales.
+    # @param [String] market
+    # @param [String] page
+    # @param [String] limit
+    # @return [Hash]
     def active_orders(market:, page: 0, limit: 20)
       path = '/v1/orders/active'
 
@@ -64,6 +87,11 @@ module CryptomktRuby
       private_get(path, params)
     end
 
+    # Retorna lista de órdenes ejecutadas en CryptoMarket pertenecientes al usuario propietario de las credenciales.
+    # @param [String] market
+    # @param [String] page
+    # @param [String] limit
+    # @return [Hash]
     def executed_orders(market:, page: 0, limit: 20)
       path = '/v1/orders/executed'
 
@@ -76,18 +104,29 @@ module CryptomktRuby
       private_get(path, params)
     end
 
+    # Permite cancelar una orden
+    # @param [String] id
+    # @return [Hash]
     def cancel_order(id)
       path = '/v1/orders/cancel'
 
       private_post(path, id: id)
     end
 
+    # Retorna el estado de una orden
+    # @param [String] id
+    # @return [Hash]
     def status_order(id)
       path = '/v1/orders/status'
 
       private_get(path, id: id)
     end
 
+    # Permite obtener en base al estado actual del mercado, la cantidad de criptomonedas o moneda local a recibir si se ejecuta una compra o venta respectivamente.
+    # @param [String] market
+    # @param [String] type
+    # @param [String] amount
+    # @return [Hash]
     def instant_order(market:, type:, amount:)
       path = '/v1/orders/instant/get'
 
@@ -100,6 +139,12 @@ module CryptomktRuby
       private_get(path, params)
     end
 
+    # Permite crear una orden de compra o venta dentro de CryptoMarket
+    # @param [String] market
+    # @param [String] type
+    # @param [String] amount
+    # @param [String] price
+    # @return [Hash]
     def create_market_order(market:, type:, amount:, price:)
       path = '/v1/orders/create'
 
@@ -113,6 +158,11 @@ module CryptomktRuby
       private_post(path, params)
     end
 
+    # Permite crear una orden instantánea en el Instant Exchange de CryptoMarket
+    # @param [String] market
+    # @param [String] type
+    # @param [String] amount
+    # @return [Hash]
     def create_instant_order(market:, type:, amount:)
       path = '/v1/orders/instant/create'
 
@@ -125,6 +175,8 @@ module CryptomktRuby
       private_post(path, params)
     end
 
+    # Permite obtener el balance actual de tus billeteras en CryptoMarket
+    # @return [Array]
     def balance
       path = '/v1/balance'
 

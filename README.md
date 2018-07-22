@@ -1,8 +1,6 @@
-# cryptomkt::Ruby
+# Cryptomkt Ruby wrapper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cryptomkt_ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Wrapper for Cryptomkt API, check documentation at [https://developers.cryptomkt.com/es](https://developers.cryptomkt.com/es/?shell#obtener-balance) and get credentials in [www.cryptomkt.com](https://www.cryptomkt.com/account#api_tab)
 
 ## Installation
 
@@ -22,10 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-client = CryptomktRuby::Client.new(key, secret, logger: true)
-client.balance
-client.book market: "ETHCLP", type: "buy"
-
+client = CryptomktRuby::Client.new(key, secret)
 
 ## Development
 
@@ -37,4 +32,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/ronzalo/cryptomkt-ruby.
 
+## TODO
 
+Implement CryptoCompra
