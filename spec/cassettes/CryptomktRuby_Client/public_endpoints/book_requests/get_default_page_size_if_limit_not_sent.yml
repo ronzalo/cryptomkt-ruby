@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cryptomkt.com/v1/book?limit=20&market=ETHCLP&page=1&type=buy
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Jul 2018 03:46:34 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d18e395044ed2ed6f2183515656f586ae1532490394; expires=Thu, 25-Jul-19
+        03:46:34 GMT; path=/; domain=.cryptomkt.com; HttpOnly; Secure
+      - sessionid=96m203xkq5upgpu77nv28r225247x4se; httponly; Path=/; secure
+      Access-Control-Allow-Headers:
+      - "*"
+      Content-Language:
+      - es
+      Access-Control-Max-Age:
+      - '1000'
+      Vary:
+      - Accept-Language,Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Allow-Methods:
+      - POST, GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 43fba3e42b5880c4-SCL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status": "success", "pagination": {"previous": 0, "limit": 20, "page":
+        1, "next": 2}, "data": [{"timestamp": "2018-07-24T19:59:31.964808", "price":
+        "300040", "amount": "2.7023"}, {"timestamp": "2018-07-24T02:51:20.407062",
+        "price": "300040", "amount": "1.0065"}, {"timestamp": "2018-07-24T15:39:04.080705",
+        "price": "300000", "amount": "0.4338"}, {"timestamp": "2018-07-24T21:54:12.348004",
+        "price": "300000", "amount": "0.1479"}, {"timestamp": "2018-07-24T19:59:51.476039",
+        "price": "300000", "amount": "1.0666"}, {"timestamp": "2018-07-24T19:37:37.900002",
+        "price": "300000", "amount": "0.0995"}, {"timestamp": "2018-07-24T16:48:15.627335",
+        "price": "297800", "amount": "0.0111"}, {"timestamp": "2018-07-24T15:16:01.012587",
+        "price": "297620", "amount": "2"}, {"timestamp": "2018-07-24T16:49:30.791852",
+        "price": "293800", "amount": "0.0062"}, {"timestamp": "2018-07-23T23:19:00.944895",
+        "price": "291180", "amount": "0.0034"}, {"timestamp": "2018-07-24T03:12:21.432596",
+        "price": "291020", "amount": "0.0104"}, {"timestamp": "2018-07-24T14:31:32.372444",
+        "price": "291000", "amount": "1.4368"}, {"timestamp": "2018-07-23T22:49:32.741525",
+        "price": "291000", "amount": "0.0343"}, {"timestamp": "2018-07-24T01:57:17.485577",
+        "price": "290060", "amount": "0.1672"}, {"timestamp": "2018-07-24T02:52:02.875842",
+        "price": "290020", "amount": "1.0068"}, {"timestamp": "2018-07-23T21:31:18.950006",
+        "price": "290000", "amount": "1"}, {"timestamp": "2018-07-23T17:46:40.116653",
+        "price": "290000", "amount": "0.5565"}, {"timestamp": "2018-07-19T23:11:20.081808",
+        "price": "289000", "amount": "0.0872"}, {"timestamp": "2018-07-15T02:19:31.463392",
+        "price": "288000", "amount": "6.9444"}, {"timestamp": "2018-07-20T22:07:22.927421",
+        "price": "285880", "amount": "0.0034"}]}'
+    http_version: 
+  recorded_at: Wed, 25 Jul 2018 03:46:37 GMT
+recorded_with: VCR 4.0.0

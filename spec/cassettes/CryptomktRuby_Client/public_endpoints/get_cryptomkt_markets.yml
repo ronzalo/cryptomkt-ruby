@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cryptomkt.com/v1/market
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Jul 2018 03:36:07 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d49dc1ba2fa36e9bd8837b2a1672df71e1532489767; expires=Thu, 25-Jul-19
+        03:36:07 GMT; path=/; domain=.cryptomkt.com; HttpOnly; Secure
+      - sessionid=sv56yf8alqo01szid3hgflf3vi2dib5f; httponly; Path=/; secure
+      Access-Control-Allow-Headers:
+      - "*"
+      Content-Language:
+      - es
+      Access-Control-Max-Age:
+      - '1000'
+      Vary:
+      - Accept-Language,Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Allow-Methods:
+      - POST, GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 43fb949508b480dc-SCL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status": "success", "data": ["ETHCLP", "ETHARS", "ETHEUR", "ETHBRL",
+        "XLMCLP", "XLMARS", "XLMEUR", "XLMBRL", "BTCCLP", "BTCARS", "BTCEUR", "BTCBRL"]}'
+    http_version: 
+  recorded_at: Wed, 25 Jul 2018 03:36:10 GMT
+recorded_with: VCR 4.0.0
