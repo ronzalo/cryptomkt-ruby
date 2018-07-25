@@ -1,5 +1,9 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'bundler/setup'
 require 'cryptomkt_ruby'
+require_relative 'support/vcr_setup'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

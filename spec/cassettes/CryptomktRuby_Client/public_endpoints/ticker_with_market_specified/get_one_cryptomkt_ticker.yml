@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cryptomkt.com/v1/ticker?market=ETHCLP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Jul 2018 03:41:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd045599ef4322f25407a47d0e3d689a81532490065; expires=Thu, 25-Jul-19
+        03:41:05 GMT; path=/; domain=.cryptomkt.com; HttpOnly; Secure
+      - sessionid=a3kui5mtcuyyiniobodt0na1heun5ula; httponly; Path=/; secure
+      Access-Control-Allow-Headers:
+      - "*"
+      Content-Language:
+      - es
+      Access-Control-Max-Age:
+      - '1000'
+      Vary:
+      - Accept-Language,Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Allow-Methods:
+      - POST, GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 43fb9bdacd0980f4-SCL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status": "success", "data": [{"volume": "105.544489916586546504",
+        "timestamp": "2018-07-25T03:41:05.300143", "bid": "311100", "last_price":
+        "311100", "high": "317940", "low": "303000", "ask": "316960", "market": "ETHCLP"}]}'
+    http_version: 
+  recorded_at: Wed, 25 Jul 2018 03:41:08 GMT
+recorded_with: VCR 4.0.0

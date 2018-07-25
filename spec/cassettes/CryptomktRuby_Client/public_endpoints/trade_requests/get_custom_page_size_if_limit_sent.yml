@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cryptomkt.com/v1/trades?end=2018-07-24&limit=5&market=ETHCLP&page=1&start=2018-07-23
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Jul 2018 03:55:45 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d572f866b5c651d865d3606b15031f16d1532490944; expires=Thu, 25-Jul-19
+        03:55:44 GMT; path=/; domain=.cryptomkt.com; HttpOnly; Secure
+      - sessionid=ssqnzpco6az3sxicvba3156onrrmnk8r; httponly; Path=/; secure
+      Access-Control-Allow-Headers:
+      - "*"
+      Content-Language:
+      - es
+      Access-Control-Max-Age:
+      - '1000'
+      Vary:
+      - Accept-Language,Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Allow-Methods:
+      - POST, GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - s-maxage=10
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 43fbb1514d3980dc-SCL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status": "success", "pagination": {"previous": 0, "limit": 5, "page":
+        1, "next": 2}, "data": [{"market_taker": "buy", "timestamp": "2018-07-23T23:41:28.507119",
+        "price": "302680", "amount": "0.0125", "market": "ETHCLP"}, {"market_taker":
+        "sell", "timestamp": "2018-07-23T23:40:44.148260", "price": "301860", "amount":
+        "0.2003", "market": "ETHCLP"}, {"market_taker": "buy", "timestamp": "2018-07-23T23:33:22.747890",
+        "price": "302700", "amount": "0.0493", "market": "ETHCLP"}, {"market_taker":
+        "buy", "timestamp": "2018-07-23T23:33:22.052146", "price": "302680", "amount":
+        "0.0167", "market": "ETHCLP"}, {"market_taker": "buy", "timestamp": "2018-07-23T23:33:13.389659",
+        "price": "302700", "amount": "0.11", "market": "ETHCLP"}]}'
+    http_version: 
+  recorded_at: Wed, 25 Jul 2018 03:55:48 GMT
+recorded_with: VCR 4.0.0

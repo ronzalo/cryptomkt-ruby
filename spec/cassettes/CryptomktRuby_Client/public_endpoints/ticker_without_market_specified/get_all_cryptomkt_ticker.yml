@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cryptomkt.com/v1/ticker?market
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Jul 2018 03:41:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d14e30ac8c505b0b49c5e29c53b430bcc1532490065; expires=Thu, 25-Jul-19
+        03:41:05 GMT; path=/; domain=.cryptomkt.com; HttpOnly; Secure
+      - sessionid=zgzbd3bpnm84ki8xe76xce1eml4i1d8g; httponly; Path=/; secure
+      Access-Control-Allow-Headers:
+      - "*"
+      Content-Language:
+      - es
+      Access-Control-Max-Age:
+      - '1000'
+      Vary:
+      - Accept-Language,Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Allow-Methods:
+      - POST, GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 43fb9bdd4a4680a6-SCL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status": "success", "data": [{"volume": "105.544489916586546504",
+        "timestamp": "2018-07-25T03:41:04.508451", "bid": "311100", "last_price":
+        "311100", "high": "317940", "low": "303000", "ask": "316960", "market": "ETHCLP"},
+        {"volume": "55.063900118679501835", "timestamp": "2018-07-25T03:41:04.508451",
+        "bid": "13306", "last_price": "13376", "high": "13450", "low": "12400", "ask":
+        "13398", "market": "ETHARS"}, {"volume": "6.553965662707551057", "timestamp":
+        "2018-07-25T03:41:04.508451", "bid": "395.1", "last_price": "414.6", "high":
+        "417.3", "low": "390", "ask": "412.4", "market": "ETHEUR"}, {"volume": "3.534059161690965979",
+        "timestamp": "2018-07-25T03:41:04.508451", "bid": "1781.6", "last_price":
+        "1797.6", "high": "1816.8", "low": "1682.2", "ask": "1817", "market": "ETHBRL"},
+        {"volume": "48976.71876869228331174", "timestamp": "2018-07-25T03:41:04.508451",
+        "bid": "199", "last_price": "202.45", "high": "204.45", "low": "190.3", "ask":
+        "203.8", "market": "XLMCLP"}, {"volume": "39845.485600882709731914", "timestamp":
+        "2018-07-25T03:41:04.508451", "bid": "8.365", "last_price": "8.39", "high":
+        "8.785", "low": "7.9", "ask": "8.605", "market": "XLMARS"}, {"volume": "14858.4685",
+        "timestamp": "2018-07-25T03:41:04.508451", "bid": "0.26", "last_price": "0.2546",
+        "high": "0.2636", "low": "0.2466", "ask": "0.2758", "market": "XLMEUR"}, {"volume":
+        "24522.924904526537479373", "timestamp": "2018-07-25T03:41:04.508451", "bid":
+        "1.127", "last_price": "1.1325", "high": "1.169", "low": "1.0705", "ask":
+        "1.15", "market": "XLMBRL"}, {"volume": "4.949660602137628577", "timestamp":
+        "2018-07-25T03:41:04.508451", "bid": "5562400", "last_price": "5560200", "high":
+        "5745200", "low": "5176400", "ask": "5658200", "market": "BTCCLP"}, {"volume":
+        "2.065840293803331304", "timestamp": "2018-07-25T03:41:04.508451", "bid":
+        "235040", "last_price": "231720", "high": "245000", "low": "214700", "ask":
+        "239940", "market": "BTCARS"}, {"volume": "0.754207609943179644", "timestamp":
+        "2018-07-25T03:41:04.508451", "bid": "7217", "last_price": "7314", "high":
+        "7450", "low": "6151", "ask": "7419", "market": "BTCEUR"}, {"volume": "1.140108961868330014",
+        "timestamp": "2018-07-25T03:41:04.508451", "bid": "30900", "last_price": "31516",
+        "high": "34398", "low": "28958", "ask": "31626", "market": "BTCBRL"}]}'
+    http_version: 
+  recorded_at: Wed, 25 Jul 2018 03:41:08 GMT
+recorded_with: VCR 4.0.0
